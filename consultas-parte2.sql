@@ -35,6 +35,6 @@ SELECT Escola.nome, Pessoa.nome FROM Escola, Professor, Pessoa WHERE Professor.i
 
 
 # 9) Listar todos os contatos dos alunos informando a matrícula e nome do aluno, nome e telefone do contato, ordenado por matrícula do aluno e nome do contato.
-SELECT Contato.nome, Pessoa.nome, Aluno.matricula FROM Contato, Pessoa, Aluno WHERE Pessoa.id = Aluno.id, Contato.id_aluno = Aluno.id;
+SELECT Contato.nome, Pessoa.nome, Aluno.matricula FROM Contato, Pessoa, Aluno WHERE Pessoa.id = Aluno.id AND Contato.id_aluno = Aluno.id ORDER BY Aluno.matricula, Contato.nome;
 
 # 10) Listar todos os professores que ministram disciplinas para apenas uma turma.
