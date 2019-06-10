@@ -1,5 +1,5 @@
-DROP  DATABASE IF EXISTS tabelas;
-create database tabelas;
+DROP DATABASE IF EXISTS tabelas;
+CREATE DATABASE tabelas;
 USE tabelas;
 
 CREATE TABLE Cidade(
@@ -67,28 +67,25 @@ CREATE TABLE Aluno(
 CREATE TABLE Contato(
     nome VARCHAR(255),
     tel VARCHAR(100),
-    id_aluno MEDIUMINT,
+    id_aluno mediumint,
     PRIMARY KEY (nome, id_aluno),
     FOREIGN KEY (id_aluno) REFERENCES Aluno(id)
 );
 
 
-CREATE TABLE ProfMinistraDisciplina(
-	id_prof MEDIUMINT,
-    id_disciplina MEDIUMINT,
-    PRIMARY KEY (id_prof, id_disciplina),
-    FOREIGN KEY (id_prof) REFERENCES Professor,
-    FOREIGN KEY (id_disciplina) REFERENCES Disciplina
-);
+#CREATE TABLE ProfMinistraDisciplina(
+#   id_prof mediumint,
+#    id_disciplina mediumint,
+#    PRIMARY KEY (id_prof, id_disciplina),
+#    FOREIGN KEY (id_prof) REFERENCES Professor,
+#    FOREIGN KEY (id_disciplina) REFERENCES Disciplina
+#);
 
-CREATE TABLE ProfMinistraTurma(
-	id_prof MEDIUMINT,
-    id_disciplina MEDIUMINT,
-    id_turma MEDIUMINT,
-    PRIMARY KEY (id_prof, id_disciplina, id_turma),
-    FOREIGN KEY (id_prof, id_disciplina) REFERENCES ProfMinistraDisciplina,
-    FOREIGN KEY (id_turma) REFERENCES Turma
-);
-
-
-
+#CREATE TABLE ProfMinistraTurma(
+#	id_prof MEDIUMINT,
+#    id_disciplina MEDIUMINT,
+#    id_turma MEDIUMINT,
+#    PRIMARY KEY (id_prof, id_disciplina, id_turma),
+#    FOREIGN KEY (id_prof, id_disciplina) REFERENCES ProfMinistraDisciplina,
+#    FOREIGN KEY (id_turma) REFERENCES Turma
+#);
