@@ -73,13 +73,21 @@ CREATE TABLE Contato(
 );
 
 
-CREATE TABLE ProfMinistraTurma(
-    id_prof MEDIUMINT,
-    id_turma MEDIUMINT,
+CREATE TABLE ProfMinistraDisciplina(
+	id_prof MEDIUMINT,
     id_disciplina MEDIUMINT,
-    PRIMARY KEY (id_prof, id_turma, id_disciplina),
-    FOREIGN KEY (id_prof) REFERENCES Professor(id),
-    FOREIGN KEY (id_turma) REFERENCES Turma(id),
-    FOREIGN KEY (id_disciplina) REFERENCES Disciplina(id)
+    PRIMARY KEY (id_prof, id_disciplina),
+    FOREIGN KEY (id_prof) REFERENCES Professor,
+    FOREIGN KEY (id_disciplina) REFERENCES Disciplina
 );
+
+CREATE TABLE ProfMinistraTurma(
+	id_prof_min_disc MEDIUMINT,
+    id_turma MEDIUMINT,
+    PRIMARY KEY (id_prof_min_disc, id_turma),
+    FOREIGN KEY (id_prof_min_disc) REFERENCES ProfMinistraDisciplina,
+    FOREIGN KEY (id_turma) REFERENCES Turma
+);
+
+
 
