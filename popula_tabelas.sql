@@ -69,7 +69,15 @@ INSERT INTO Contato(nome,tel,id_aluno) VALUES ("Risa","1021-6969",50),("Kelly","
 INSERT INTO Contato(nome,tel,id_aluno) VALUES ("Quinlan","5050-2748",22),("Kennan","8329-5354",38),("Channing","4604-9831",95),("Shea","3703-7729",59),("Stephanie","0157-3564",97),("Jayme","8721-2432",58),("Jessamine","0464-3498",60),("Rudyard","3448-3200",91),("Plato","2020-6363",67),("Phillip","6619-2213",71);
 
 
+
+## Tabela ProfMinistraDisciplina (30 ocorrências)  ##
+
+INSERT INTO ProfMinistraDisciplina(id_prof, id_disciplina) VALUES (1,4),(2,2),(3,5),(4,1),(5,9),(6,20),(7,19),(8,20),(9,13),(10,12);
+INSERT INTO ProfMinistraDisciplina(id_prof, id_disciplina) VALUES (11,2),(12,21),(13,16),(14,5),(15,22),(16,7),(18,3),(19,20),(20,1);
+INSERT INTO ProfMinistraDisciplina(id_prof, id_disciplina) VALUES (1,2),(1,8),(3,9),(4,5),(15,12),(15,7),(15,3),(19,19),(19,3);
+
+
 ## Tabela ProfMinistraTurma (10 ocorrências)  ##
 
-INSERT INTO ProfMinistraTurma(id_prof,id_turma,id_disciplina) VALUES (1,1,1),(2,2,2),(3,3,3),(4,4,4),(5,5,5),(6,6,6),(7,7,7),(8,8,8),(9,9,9),(10,10,10), (1,2,3), (1,3,4), (2,5,7), (2,5,6), (4,3,2), (1,7,5), (6,4,2);
+INSERT INTO ProfMinistraTurma(id_prof_min_disc,id_turma) VALUES (1,1), (3,2), (4,3), (6,4), (15,5), (19,6), (11, 7), (13,8), (2,9), (5,10);
 
