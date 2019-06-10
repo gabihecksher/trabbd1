@@ -82,10 +82,11 @@ CREATE TABLE ProfMinistraDisciplina(
 );
 
 CREATE TABLE ProfMinistraTurma(
-	id_prof_min_disc MEDIUMINT,
+	id_prof MEDIUMINT,
+    id_disciplina MEDIUMINT,
     id_turma MEDIUMINT,
-    PRIMARY KEY (id_prof_min_disc, id_turma),
-    FOREIGN KEY (id_prof_min_disc) REFERENCES ProfMinistraDisciplina,
+    PRIMARY KEY (id_prof, id_disciplina, id_turma),
+    FOREIGN KEY (id_prof, id_disciplina) REFERENCES ProfMinistraDisciplina,
     FOREIGN KEY (id_turma) REFERENCES Turma
 );
 

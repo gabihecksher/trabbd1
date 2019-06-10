@@ -79,5 +79,5 @@ INSERT INTO ProfMinistraDisciplina(id_prof, id_disciplina) VALUES (1,2),(1,8),(3
 
 ## Tabela ProfMinistraTurma (10 ocorrências)  ##
 
-INSERT INTO ProfMinistraTurma(id_prof_min_disc,id_turma) VALUES (1,1), (3,2), (4,3), (6,4), (15,5), (19,6), (11, 7), (13,8), (2,9), (5,10);
+INSERT INTO ProfMinistraTurma(id_prof, id_disciplina, id_turma) VALUES (5,9,1), (6,20,2), (19,19,3), (15,12,4), (15,7,5), (19,3,6), (4,5,7), (4,1,8), (1,4,9), (13,16,10);
 
