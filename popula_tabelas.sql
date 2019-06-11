@@ -38,7 +38,7 @@ INSERT INTO Escola(id,nome,id_cidade,id_diretor) VALUES (1,"Harvard University",
 
 ## Turma (10 turmas) (Todas as escolas possuem pelo menos 1 turma)
 
-INSERT INTO Turma(id,nome,id_escola) VALUES (1,"A1",3),(2,"A1",2),(3,"A1",4),(4,"A1",5),(5,"A1",1),(6,"A2",1),(7,"A2",3),(8,"A3",3),(9,"A4",3),(10,"A5",3);
+INSERT INTO Turma(id,nome,id_escola) VALUES (1,"A1",3),(2,"A1",2),(3,"A1",4),(4,"A1",5),(5,"A1",1),(6,"A2",1),(7,"A2",3),(8,"A3",3),(9,"A4",3),(10,"A5",3), (11,"A2",5), (12,"A3",1);
 
 
 ## Tabela Aluno (80 alunos) (21-100 ID PESSOA)
@@ -79,5 +79,5 @@ INSERT INTO ProfMinistraDisciplina(id_prof, id_disciplina) VALUES (1,2),(1,8),(3
 
 ## Tabela ProfMinistraTurma (10 ocorrências)  ##
 
-INSERT INTO ProfMinistraTurma(id_prof, id_disciplina, id_turma) VALUES (5,9,1), (6,20,2), (19,19,3), (15,12,4), (15,7,5), (19,3,6), (4,5,7), (4,1,8), (1,4,9), (13,16,10);
+INSERT INTO ProfMinistraTurma(id_prof, id_disciplina, id_turma) VALUES (5,9,1), (6,20,2), (19,19,3), (15,12,4), (15,7,5), (19,3,6), (4,5,7), (4,1,8), (1,4,9), (13,16,10), (15,22,11), (19,20,12);
 

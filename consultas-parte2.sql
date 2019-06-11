@@ -19,6 +19,8 @@ SELECT Aluno.id, nome, matricula FROM Aluno, Pessoa WHERE Aluno.id = Pessoa.id A
 SELECT id, nome FROM Turma WHERE (SELECT COUNT(*) FROM Aluno WHERE Aluno.id_turma = Turma.id) > 5;
 
 # 4) Listar o código, nome e titulação dos professores que ministram aulas para pelo menos três turmas diferentes.
+SELECT Pessoa.id, Pessoa.nome, Professor.titulacao FROM Pessoa, Professor, ProfMinistraTurma WHERE Professor.id = Pessoa.id AND
+ Professor.id = ProfMinistraTurma.id_prof GROUP BY id HAVING COUNT(DISTINCT ProfMinistraTurma.id_turma) >=3;
 
 # 5) Listar por disciplina o número de professores que podem ministrá-la e quantos efetivamente ministram a mesma para uma turma.
 #SELECT COUNT(*) FROM Disciplina, Professor, ProfMinistraDisciplina WHERE Disciplina.id = ProfMinistraDisciplina.id_disciplina;
